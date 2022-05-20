@@ -7,7 +7,10 @@ def sayhello(request):
     
 def sayhello2(request, username):
     now = datetime.now()
-    return render(request, 'hello3.html', {'username' : username, 'now': now})
+    return render(request, 'hello3.html', locals())
+def sayhello4(request, username):
+    now = datetime.now()
+    return render(request, 'hello4.html', locals())
     
 
 
